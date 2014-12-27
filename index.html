@@ -20,16 +20,6 @@ window.addEventListener("load",function() {
 	
 	frame();
 });
-
-function getSoundFile(file,callback) {
-	var req = new XMLHttpRequest();
-	req.open("GET",file,true);
-	req.responseType = "arraybuffer";
-	req.onload = function() {
-		callback(req.response);
-	};
-	req.send();
-}
 </script>
 </head>
 <body>

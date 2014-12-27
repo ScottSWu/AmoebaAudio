@@ -272,18 +272,7 @@ AmoebaAudio.prototype = {
 			"width" : "100%"
 		});
 		
-		$(audio).set("controls",true)
-		
-		$(audio).ael("ended",function(event) {
-			if (instance.playlist) {
-				instance.playlistIndex = (instance.playlistIndex + 1) % (instance.playlist.length);
-				setTimeout(function() {
-					instance.stop();
-					instance.load(instance.playlist[instance.playlistIndex]);
-					instance.play();
-				},1000);
-			}
-		});
+		$(audio).set("controls",true);
 		
 		return audio;
 	},
